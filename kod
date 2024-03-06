@@ -1,14 +1,10 @@
-import sys
-import keyboard
-total_sum = 0
-print("Press Enter to continue or press Esc to exit: ")
-while True:
+# Сделать рабочее завершение по нажатия клавиши не вышло, поэтому цикл завершается при отсутствии сиимволов в вводе.
+
+total_sum = 0 #переменная для собирания конечного значения суммы всех символов
+while True: #цикл
     try:
-        if keyboard.is_pressed('ENTER'):
-            char = input("Введите символ: ")
-            total_sum += ord(char)
-        #if keyboard.is_pressed('Esc'):
-            #sys.exit(0)
+        char = input("Введите символ: ") #ввод символа
+        total_sum += ord(char) #счётчик суммы
     except:
-        break
+        break #завершение цикла при отсутствии символов
 print("Сумма ASCII кодов введенных символов: ", total_sum)
