@@ -1,10 +1,14 @@
-from keyboard import *
+import sys
+import keyboard
 total_sum = 0
-print("Введите символы. Нажмите Esc для завершения.")
+print("Press Enter to continue or press Esc to exit: ")
 while True:
-    if is_pressed('Esc'):
+    try:
+        if keyboard.is_pressed('ENTER'):
+            char = input("Введите символ: ")
+            total_sum += ord(char)
+        #if keyboard.is_pressed('Esc'):
+            #sys.exit(0)
+    except:
         break
-    else:
-        char = input("Введите символ: ")
-        total_sum += ord(char)
 print("Сумма ASCII кодов введенных символов: ", total_sum)
