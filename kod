@@ -1,0 +1,10 @@
+from keyboard import *
+total_sum = 0
+print("Введите символы. Нажмите Esc для завершения.")
+while True:
+    if is_pressed('Esc'):
+        break
+    else:
+        char = input("Введите символ: ")
+        total_sum += ord(char)
+print("Сумма ASCII кодов введенных символов: ", total_sum)
